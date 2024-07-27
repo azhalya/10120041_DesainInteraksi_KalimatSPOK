@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SusunKalimat.unity
     guid: 0efa9dd1d53d29f49b434a64934f9552
+  - enabled: 1
+    path: Assets/Scenes/Belajar.unity
+    guid: 139d76bd36cc35a4499ae7f08f123e52
   m_configObjects: {}
