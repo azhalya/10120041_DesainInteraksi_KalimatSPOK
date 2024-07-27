@@ -7,7 +7,11 @@ public class SceneManagement : MonoBehaviour
 {
     public void ChangeScene(string sceneName)
     {
-        // Test
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
