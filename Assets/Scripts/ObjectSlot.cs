@@ -6,12 +6,22 @@ using UnityEngine.EventSystems;
 public class ObjectSlot : MonoBehaviour, IDropHandler
 {
     [SerializeField] private Type _type;
+    [SerializeField] public Kalimat _kalimat;
     
     public enum Type
     {
         Question,
         Answer,
     }
+    
+    public enum Kalimat
+    {
+        Subjek,
+        Predikat,
+        Objek,
+        Keterangan
+    }
+
     
     public void OnDrop(PointerEventData eventData)
     {

@@ -11,11 +11,20 @@ public class DraggableObject : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private Image _image;
 
     public Type type;
+    public Kalimat kalimat;
     
     public enum Type
     {
         Question,
         Answer,
+    }
+    
+    public enum Kalimat
+    {
+        Subjek,
+        Predikat,
+        Objek,
+        Keterangan
     }
 
     public void OnBeginDrag(PointerEventData eventData)
