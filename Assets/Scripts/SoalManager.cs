@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SoalManager : MonoBehaviour
@@ -11,11 +12,16 @@ public class SoalManager : MonoBehaviour
     [SerializeField] private TMP_Text _soalText;
     [SerializeField] private ObjectSlot[] _slots;
     [SerializeField] private int _score;
+    [SerializeField] private Image _kunciJawabanImage;
 
     [SerializeField] private int _curNoSoal;
 
     private void Awake()
     {
+        for (int i = 0; i < _bankSoal.soal.Length; i++)
+        {
+            _bankSoal.soal[i].isDone = false;
+        }
         Initialize();
     }
 
@@ -31,14 +37,20 @@ public class SoalManager : MonoBehaviour
                 Instantiate(soal, transform.GetChild(i));
                 i++;
             }
+
+            _kunciJawabanImage.sprite = _bankSoal.soal[noSoal].kunciJawabanImage;
             _bankSoal.soal[noSoal].isDone = true;
             _curNoSoal++;
         }
         else
         {
-            if (_curNoSoal < 3)
+            if (_curNoSoal <= 3)
             {
                 Initialize();
+            }
+            else
+            {
+                Debug.Log("Soal Habis");
             }
         }
     }
@@ -47,7 +59,11 @@ public class SoalManager : MonoBehaviour
     {
         foreach (var slot in _slots)
         {
-            if (!slot.GetComponentInChildren<DraggableObject>()) continue;
+            if (!slot.GetComponentInChildren<DraggableObject>())
+            {
+                Debug.Log("Belum Penuh");
+                return;
+            }
             if (slot.GetComponentInChildren<DraggableObject>().kalimat.ToString() == slot._kalimat.ToString())
             {
                 _score++;
@@ -58,6 +74,7 @@ public class SoalManager : MonoBehaviour
         {
             Destroy(slot.transform.GetChild(0).gameObject);
         }
+        
         Initialize();
     }
 }

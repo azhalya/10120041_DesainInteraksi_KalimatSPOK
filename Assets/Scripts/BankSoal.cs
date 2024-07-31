@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Bank Soal")]
 public class BankSoal : ScriptableObject
@@ -12,6 +13,7 @@ public class BankSoal : ScriptableObject
     public struct Soal
     {
         public bool isDone;
+        public Sprite kunciJawabanImage;
         public DraggableObject[] kata;
     }
 }
