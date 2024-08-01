@@ -21,16 +21,16 @@ MonoBehaviour:
     - {fileID: 6572234636470615106, guid: 040e2cfa79c97ba4aa88e19fc63edb81, type: 3}
     - {fileID: 6250505110236485712, guid: 913b6e542a049d2458b3f892dc3365e5, type: 3}
   - isDone: 1
-    kunciJawabanImage: {fileID: 21300000, guid: ddddc069d4bac3d4d8b52f600820753a, type: 3}
+    kunciJawabanImage: {fileID: 21300000, guid: 7ba78d7eefed1684b937f2127ad3d9c2, type: 3}
     kata:
     - {fileID: 4292992624665749609, guid: 9c017af1d1f1b924f9ead0a17325e3e0, type: 3}
     - {fileID: 127125287745545902, guid: 39e706d2ec5fb984a8460bada3b39827, type: 3}
     - {fileID: 7528386762912008680, guid: d6803c81d7e58a34eb439c3fd01647b5, type: 3}
     - {fileID: 7965200462716721883, guid: 8022770fdd0452c4fa50b0a252f4e5d8, type: 3}
   - isDone: 1
-    kunciJawabanImage: {fileID: 21300000, guid: b2044644d2da9364a80ba19cbd5351ce, type: 3}
+    kunciJawabanImage: {fileID: 21300000, guid: 768ff68847710a242a4a185549fba9cc, type: 3}
     kata:
     - {fileID: 7965200462716721883, guid: aa88a22dd58ced04aa7b2b21b1a250ca, type: 3}
-    - {fileID: 7528386762912008680, guid: 91c1ddb348ff83b42a75cad5c6922178, type: 3}
+    - {fileID: 7528386762912008680, guid: 932146785a6d9f949b83e030ccfe5bb3, type: 3}
     - {fileID: 4292992624665749609, guid: 1e1c1f2feb6f07e46b8c115ca971a64c, type: 3}
     - {fileID: 127125287745545902, guid: 63450cd72091a024dade172c9f00b775, type: 3}

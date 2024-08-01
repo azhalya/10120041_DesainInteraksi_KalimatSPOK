@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/ContohSusunKalimat.unity
+    guid: 4d190495f5e36fb4298db954a82d7ad2
+  - enabled: 1
     path: Assets/Scenes/SusunKalimat.unity
     guid: 0efa9dd1d53d29f49b434a64934f9552
   - enabled: 1
