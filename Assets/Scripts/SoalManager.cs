@@ -16,6 +16,15 @@ public class SoalManager : MonoBehaviour
 
     [SerializeField] private int _curNoSoal;
 
+    [SerializeField] private GameObject _benarPanel;
+    [SerializeField] private GameObject _salahPanel;
+    [SerializeField] private GameObject _selesaiPanel;
+
+    [SerializeField] private TMP_Text _scoreText;
+
+    private int _curScore;
+    private int _noSoal;
+
     private void Awake()
     {
         for (int i = 0; i < _bankSoal.soal.Length; i++)
@@ -27,19 +36,20 @@ public class SoalManager : MonoBehaviour
 
     public void Initialize()
     {
+        Debug.Log(_score);
         _soalText.text = "Soal " + _curNoSoal;
-        var noSoal = Random.Range(0, _bankSoal.soal.Length);
-        if (!_bankSoal.soal[noSoal].isDone)
+        _noSoal = Random.Range(0, _bankSoal.soal.Length);
+        if (!_bankSoal.soal[_noSoal].isDone)
         {
             var i = 0;
-            foreach (var soal in _bankSoal.soal[noSoal].kata)
+            foreach (var soal in _bankSoal.soal[_noSoal].kata)
             {
                 Instantiate(soal, transform.GetChild(i));
                 i++;
             }
 
-            _kunciJawabanImage.sprite = _bankSoal.soal[noSoal].kunciJawabanImage;
-            _bankSoal.soal[noSoal].isDone = true;
+            _kunciJawabanImage.sprite = _bankSoal.soal[_noSoal].kunciJawabanImage;
+            _bankSoal.soal[_noSoal].isDone = true;
             _curNoSoal++;
         }
         else
@@ -50,7 +60,8 @@ public class SoalManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Soal Habis");
+                _selesaiPanel.SetActive(true);
+                _scoreText.text = ((_score * 100) / 12).ToString();
             }
         }
     }
@@ -67,6 +78,7 @@ public class SoalManager : MonoBehaviour
             if (slot.GetComponentInChildren<DraggableObject>().kalimat.ToString() == slot._kalimat.ToString())
             {
                 _score++;
+                _curScore++;
             }
         }
 
@@ -74,7 +86,29 @@ public class SoalManager : MonoBehaviour
         {
             Destroy(slot.transform.GetChild(0).gameObject);
         }
-        
+
+        if (_curScore == 4)
+        {
+            _benarPanel.SetActive(true);
+        }
+        else
+        {
+            _salahPanel.SetActive(true);
+        }
+    }
+
+    public void OnNextSoal()
+    {
+        _curScore = 0;
+        Initialize();
+    }
+
+    public void OnRestart()
+    {
+        _bankSoal.soal[_noSoal].isDone = false;
+        _curScore = 0;
+        _score = (_curNoSoal - 2) * 4;
+        _curNoSoal--;
         Initialize();
     }
 }
