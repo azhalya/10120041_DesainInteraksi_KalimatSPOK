@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,8 @@ public class SoalManager : MonoBehaviour
     [SerializeField] private ObjectSlot[] _slots;
     [SerializeField] private int _score;
     [SerializeField] private Image _kunciJawabanImage;
-
+    [SerializeField] [CanBeNull] private Image _deskripsiGambarImage;
+    
     [SerializeField] private int _curNoSoal;
 
     [SerializeField] private GameObject _benarPanel;
@@ -36,7 +38,6 @@ public class SoalManager : MonoBehaviour
 
     public void Initialize()
     {
-        Debug.Log(_score);
         _soalText.text = "Soal " + _curNoSoal;
         _noSoal = Random.Range(0, _bankSoal.soal.Length);
         if (!_bankSoal.soal[_noSoal].isDone)
@@ -49,6 +50,10 @@ public class SoalManager : MonoBehaviour
             }
 
             _kunciJawabanImage.sprite = _bankSoal.soal[_noSoal].kunciJawabanImage;
+            if (_deskripsiGambarImage)
+            {
+                _deskripsiGambarImage.sprite = _bankSoal.soal[_noSoal].deskripsiGambar;
+            }
             _bankSoal.soal[_noSoal].isDone = true;
             _curNoSoal++;
         }
@@ -72,7 +77,6 @@ public class SoalManager : MonoBehaviour
         {
             if (!slot.GetComponentInChildren<DraggableObject>())
             {
-                Debug.Log("Belum Penuh");
                 return;
             }
             if (slot.GetComponentInChildren<DraggableObject>().kalimat.ToString() == slot._kalimat.ToString())

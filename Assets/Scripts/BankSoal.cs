@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class BankSoal : ScriptableObject
     {
         public bool isDone;
         public Sprite kunciJawabanImage;
+        [CanBeNull] public Sprite deskripsiGambar;
         public DraggableObject[] kata;
     }
 }

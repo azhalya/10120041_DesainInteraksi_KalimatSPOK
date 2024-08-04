@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a132d40c09548478dcb0caf02811b9, type: 3}
+  m_Name: Deskripsi Gambar
+  m_EditorClassIdentifier: 
+  soal:
+  - isDone: 1
+    kunciJawabanImage: {fileID: 21300000, guid: 90266bca2628fab46a213bc1a0aedad0, type: 3}
+    deskripsiGambar: {fileID: 21300000, guid: 5e5eef62bf5f2bb4d9d142e12e06cade, type: 3}
+    kata:
+    - {fileID: 7965200462716721883, guid: 9c544e8b29356854db60b41d3099fa56, type: 3}
+    - {fileID: 7528386762912008680, guid: 32a9edac04fdd2d43940eee4f4497e4f, type: 3}
+    - {fileID: 7965200462716721883, guid: 91638883895f68044bc08da0a162ca2e, type: 3}
+    - {fileID: 4292992624665749609, guid: 0eb147ddb51aee9419edb787fb2a107d, type: 3}
+  - isDone: 1
+    kunciJawabanImage: {fileID: 21300000, guid: db47a9a8663ebeb418a0f78eef76d243, type: 3}
+    deskripsiGambar: {fileID: 21300000, guid: 8510234ee43f38245bec74abbeeb81ad, type: 3}
+    kata:
+    - {fileID: 7528386762912008680, guid: e12f3d6dad0890a4688e6213f9ad2ba7, type: 3}
+    - {fileID: 4292992624665749609, guid: 8680423d7e5151a4eab3ff9e728a2d59, type: 3}
+    - {fileID: 7965200462716721883, guid: 064737bac36b81040a950716e7034e21, type: 3}
+    - {fileID: 7965200462716721883, guid: e4909391474a9a94d826fa51c76497d6, type: 3}
+  - isDone: 0
+    kunciJawabanImage: {fileID: 21300000, guid: 4b75131e00440a241bf6c7ef0683ed82, type: 3}
+    deskripsiGambar: {fileID: 21300000, guid: c9d9a335146e2e64291504e6f4b08eea, type: 3}
+    kata:
+    - {fileID: 7965200462716721883, guid: 37e0235cee5b22342bf8192ff9bd5c7a, type: 3}
+    - {fileID: 7528386762912008680, guid: 46db568d04b30214eb47cae9ce520905, type: 3}
+    - {fileID: 4292992624665749609, guid: b4c0970fc582d6945b554f1d48e36f49, type: 3}
+    - {fileID: 7965200462716721883, guid: e3772d60ff80595468017dcf30bfcbb1, type: 3}
