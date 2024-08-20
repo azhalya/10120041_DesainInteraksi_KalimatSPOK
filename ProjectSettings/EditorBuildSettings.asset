@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/MariBermain.unity
+    guid: 822e5a606c7d298458d1b6db2214a6a1
+  - enabled: 1
     path: Assets/Scenes/ContohDeskripsiGambar.unity
     guid: 1f117a7f11eb5754ba99aeca4b7f137a
   - enabled: 1

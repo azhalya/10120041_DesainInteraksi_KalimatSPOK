@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55a132d40c09548478dcb0caf02811b9, type: 3}
-  m_Name: Bank Soal
+  m_Name: Susun Kalimat
   m_EditorClassIdentifier: 
   soal:
   - isDone: 1
     kunciJawabanImage: {fileID: 21300000, guid: 0a01710061bf42940b133614e712ac9b, type: 3}
+    deskripsiGambar: {fileID: 0}
     kata:
     - {fileID: 3250736020802170761, guid: 9d86c0509d025b741899216d56a60a32, type: 3}
     - {fileID: 8164729156289787242, guid: f546930000b68da4082f3cce9b72c550, type: 3}
@@ -22,13 +23,15 @@ MonoBehaviour:
     - {fileID: 6250505110236485712, guid: 913b6e542a049d2458b3f892dc3365e5, type: 3}
   - isDone: 1
     kunciJawabanImage: {fileID: 21300000, guid: 7ba78d7eefed1684b937f2127ad3d9c2, type: 3}
+    deskripsiGambar: {fileID: 0}
     kata:
     - {fileID: 4292992624665749609, guid: 9c017af1d1f1b924f9ead0a17325e3e0, type: 3}
     - {fileID: 127125287745545902, guid: 39e706d2ec5fb984a8460bada3b39827, type: 3}
     - {fileID: 7528386762912008680, guid: d6803c81d7e58a34eb439c3fd01647b5, type: 3}
     - {fileID: 7965200462716721883, guid: 8022770fdd0452c4fa50b0a252f4e5d8, type: 3}
-  - isDone: 1
+  - isDone: 0
     kunciJawabanImage: {fileID: 21300000, guid: 768ff68847710a242a4a185549fba9cc, type: 3}
+    deskripsiGambar: {fileID: 0}
     kata:
     - {fileID: 7965200462716721883, guid: aa88a22dd58ced04aa7b2b21b1a250ca, type: 3}
     - {fileID: 7528386762912008680, guid: 932146785a6d9f949b83e030ccfe5bb3, type: 3}
